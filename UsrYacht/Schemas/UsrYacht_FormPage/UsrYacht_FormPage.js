@@ -51,6 +51,27 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
+				"name": "PushMeButton",
+				"values": {
+					"type": "crt.Button",
+					"caption": "#ResourceString(PushMeButton_caption)#",
+					"color": "accent",
+					"disabled": false,
+					"size": "medium",
+					"iconPosition": "left-icon",
+					"visible": true,
+					"clicked": {
+						"request": "usr.PushButtonRequest"
+					},
+					"clickMode": "default",
+					"icon": "call-button-icon"
+				},
+				"parentName": "CardToggleContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
 				"name": "UsrName",
 				"values": {
 					"layoutConfig": {
@@ -163,17 +184,12 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 						"rowSpan": 1
 					},
 					"type": "crt.ComboBox",
-					"label": "$Resources.Strings.PDS_UsrColumn8_5k7t4b1",
+					"label": "$Resources.Strings.PDS_UsrDriveType_elg0ri9",
 					"labelPosition": "auto",
-					"control": "$PDS_UsrColumn8_5k7t4b1",
+					"control": "$PDS_UsrDriveType_elg0ri9",
 					"listActions": [],
 					"showValueAsLink": true,
-					"controlActions": [],
-					"visible": true,
-					"readonly": false,
-					"placeholder": "",
-					"tooltip": "",
-					"valueDetails": null
+					"controlActions": []
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
@@ -181,12 +197,12 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 			},
 			{
 				"operation": "insert",
-				"name": "addRecord_ppuczo7",
+				"name": "addRecord_qkh1dvp",
 				"values": {
 					"code": "addRecord",
 					"type": "crt.ComboboxSearchTextAction",
 					"icon": "combobox-add-new",
-					"caption": "#ResourceString(addRecord_ppuczo7_caption)#",
+					"caption": "#ResourceString(addRecord_qkh1dvp_caption)#",
 					"clicked": {
 						"request": "crt.CreateRecordFromLookupRequest",
 						"params": {}
@@ -305,6 +321,26 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				"parentName": "Manager",
 				"propertyName": "listActions",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "Number",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"colSpan": 1,
+						"row": 5,
+						"rowSpan": 1
+					},
+					"type": "crt.Input",
+					"label": "$Resources.Strings.PDS_UsrNumber_ao65igm",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrNumber_ao65igm",
+					"multiline": false
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 8
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -349,11 +385,6 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 							"path": "PDS.UsrCaptain"
 						}
 					},
-					"PDS_UsrColumn8_5k7t4b1": {
-						"modelConfig": {
-							"path": "PDS.UsrColumn8"
-						}
-					},
 					"PDS_UsrStatus_3hu2mup": {
 						"modelConfig": {
 							"path": "PDS.UsrStatus"
@@ -362,6 +393,16 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 					"PDS_UsrManager_afd8pl8": {
 						"modelConfig": {
 							"path": "PDS.UsrManager"
+						}
+					},
+					"PDS_UsrDriveType_elg0ri9": {
+						"modelConfig": {
+							"path": "PDS.UsrDriveType"
+						}
+					},
+					"PDS_UsrNumber_ao65igm": {
+						"modelConfig": {
+							"path": "PDS.UsrNumber"
 						}
 					}
 				}
@@ -402,7 +443,21 @@ define("UsrYacht_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEM
 				}
 			}
 		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
-		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
+		handlers: /**SCHEMA_HANDLERS*/[
+			{
+				request: "usr.PushButtonRequest",
+				/* Implementation of the custom query handler. */
+				handler: async (request, next) => {
+					console.log("Button works...");
+					Terrasoft.showInformation("My button was pressed.");
+					var price = await request.$context.PDS_UsrPrice_r04pb3a;
+					console.log("Price = " + price);
+					request.$context.PDS_UsrComment_18h8kve = "comment from JS code!";
+					/* Call the next handler if it exists and return its result. */
+					return next?.handle(request);
+				}
+			}
+		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
 	};
