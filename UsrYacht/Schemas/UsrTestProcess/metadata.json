@@ -39,6 +39,7 @@
           "A5": "f823b942-0a6e-4a96-aadc-c646fa11528b",
           "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
           "BL8": "97d7b139-351d-4e28-9ac3-9a62915002f2",
+          "BM1": 0,
           "BM4": [
             {
               "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
@@ -61,21 +62,6 @@
       "BK5": [],
       "BK4": [
         {
-          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartEvent",
-          "UId": "06f4a7dc-49cb-473b-9a23-2b19c3e9d9da",
-          "A2": "StartEvent1",
-          "A3": "97d7b139-351d-4e28-9ac3-9a62915002f2",
-          "A4": "97d7b139-351d-4e28-9ac3-9a62915002f2",
-          "A5": "f823b942-0a6e-4a96-aadc-c646fa11528b",
-          "IL2": "e065eef4-1f9c-496c-9fba-920808659254",
-          "BL3": "224;184",
-          "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
-          "BL8": "97d7b139-351d-4e28-9ac3-9a62915002f2",
-          "BN2": "31;31",
-          "BO3": true,
-          "FC1": []
-        },
-        {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
           "UId": "abb7b7a5-27c3-4d2f-9cce-62ae1bc5c603",
           "A2": "TerminateEvent1",
@@ -89,6 +75,27 @@
           "BN2": "31;31",
           "BO3": true,
           "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartTimerEvent",
+          "UId": "06f4a7dc-49cb-473b-9a23-2b19c3e9d9da",
+          "A2": "StartTimerEvent1",
+          "A3": "97d7b139-351d-4e28-9ac3-9a62915002f2",
+          "A4": "97d7b139-351d-4e28-9ac3-9a62915002f2",
+          "A5": "f823b942-0a6e-4a96-aadc-c646fa11528b",
+          "IL2": "e065eef4-1f9c-496c-9fba-920808659254",
+          "BL3": "224;184",
+          "BL7": "c735ed92-e545-4699-b3c6-f8f57dd8c529",
+          "BL8": "97d7b139-351d-4e28-9ac3-9a62915002f2",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": [],
+          "ED1": false,
+          "PS1": "0 0 3 ? * 2,3,4,5,6 *",
+          "PS3": 3,
+          "PS4": "null",
+          "PS5": "null",
+          "PS6": "UTC"
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",

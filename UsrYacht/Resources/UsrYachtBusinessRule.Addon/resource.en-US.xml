@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.08b7f97b-2adb-4f99-bd37-5598d7b847de.Caption" Value="ChildRule-aa6e0abd-64a6-3597-f9dc-2548723e5754-ClearValue" />
+			<Item Name="AddonConfig.Rules.86f8f538-82c8-1217-8bf3-7ff45d44857e.Caption" Value="Manager equals Employee" />
+			<Item Name="AddonConfig.Rules.aa6e0abd-64a6-3597-f9dc-2548723e5754.Caption" Value="City Filter" />
+			<Item Name="AddonConfig.Rules.e91da0a8-09d8-4c50-83ab-640f41df6295.Caption" Value="ChildRule-aa6e0abd-64a6-3597-f9dc-2548723e5754-PopulateValue" />
+			<Item Name="Caption" Value="Yacht (Business rules)" />
+		</Items>
+	</Group>
+</Resources>
