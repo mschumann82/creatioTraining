@@ -9,6 +9,7 @@
 			<Item Name="LocalizableStrings.addRecord_lcap960_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_qkh1dvp_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_s8wbv6i_caption.Value" Value="Add new" />
+			<Item Name="LocalizableStrings.CalculateAvg_caption.Value" Value="Calculate Avg" />
 			<Item Name="LocalizableStrings.CrewCannotBeLess.Value" Value="Crew must be assigned." />
 			<Item Name="LocalizableStrings.EmailInput_ybablb6_caption.Value" Value="Email address" />
 			<Item Name="LocalizableStrings.EmailInput_ybablb6_label.Value" Value="Manager Email" />
@@ -20,6 +21,7 @@
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_30erf6f_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_021joyt_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.LengthCannotBeLess.Value" Value="Length cannot be less than 3 meters." />
+			<Item Name="LocalizableStrings.MultiSelect_Categories_label.Value" Value="Categories" />
 			<Item Name="LocalizableStrings.PassengersCannotBeLess.Value" Value="Must have passengers." />
 			<Item Name="LocalizableStrings.PriceConnotBeLess.Value" Value="Price cannot be less than $50." />
 			<Item Name="LocalizableStrings.PushMeButton_caption.Value" Value="Push Me!" />

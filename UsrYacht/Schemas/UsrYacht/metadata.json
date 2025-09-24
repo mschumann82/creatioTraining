@@ -163,7 +163,7 @@
 }
 + MetaData.Schema.D2 {
   "UId": "f101e114-1819-81fb-e31f-7c02f7fcb76b",
-  "A2": "UsrColumn13",
+  "A2": "UsrCity",
   "A3": "ccf7cfdc-82f0-4ef7-9cbe-b7181a7ed375",
   "A4": "ccf7cfdc-82f0-4ef7-9cbe-b7181a7ed375",
   "A5": "cd6d6566-34e7-484a-bacc-e41e8bb21621",
@@ -171,8 +171,8 @@
   "S4": "5ca90b6a-93e7-4448-befe-ab5166ec2cfe",
   "E6": true,
   "E20": true,
-  "E17": "UsrColumn13Id",
-  "E18": "UsrColumn13Name"
+  "E17": "UsrCityId",
+  "E18": "UsrCityName"
 }
 + MetaData.Schema.D2 {
   "UId": "3d3e1410-fa47-253f-169c-21f066cb8212",
